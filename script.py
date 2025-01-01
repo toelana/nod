@@ -73,7 +73,7 @@ def reg_accaunt(email, password, username, ref_code, proxy_url=None, captcha_tok
            'recaptcha_token': captcha_token
        }
        headers = get_headers()
-       url = "https://api.nodepay.ai/api/auth/register"
+       url = "https://app.nodepay.ai/login"
        response = requests.post(url,headers=headers,json=register_data,proxies=proxy_url,timeout=10)
        response.raise_for_status()
        return response.json()
